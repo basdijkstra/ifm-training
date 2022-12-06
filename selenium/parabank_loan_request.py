@@ -29,8 +29,7 @@ def test_loan_application_is_denied():
     rlp.submit_loan_request('10000', '100', '12345')
 
     # Assert on loan application result
-    result = rlp.get_loan_application_result()
-    assert result == 'Denied'
+    assert rlp.get_loan_application_result() == 'Denied'
 
     # Close browser
     driver.quit()
